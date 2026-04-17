@@ -1,0 +1,68 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "lark-handover-skill"
+version = "1.1.0"
+description = "飞书离职交接文档自动生成器 - 自动抓取文档、智能分类、一键生成专业交接清单"
+readme = "README.md"
+license = {text = "MIT"}
+authors = [
+    {name = "Your Name", email = "your.email@example.com"}
+]
+keywords = ["feishu", "lark", "handover", "文档交接", "离职", "skill", "claude-code", "qwen-code"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Intended Audience :: End Users/Desktop",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Office/Business",
+    "Topic :: Utilities",
+]
+requires-python = ">=3.8"
+dependencies = []
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+    "black>=22.0",
+    "flake8>=4.0",
+    "mypy>=0.950",
+]
+
+[project.scripts]
+lark-handover = "skills.lark_handover.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/yourname/lark-handover-skill"
+Repository = "https://github.com/yourname/lark-handover-skill.git"
+Issues = "https://github.com/yourname/lark-handover-skill/issues"
+
+[tool.setuptools]
+packages = ["skills.lark_handover"]
+
+[tool.setuptools.package-dir]
+"skills.lark_handover" = "skills/lark-handover"
+
+[tool.black]
+line-length = 100
+target-version = ['py38']
+
+[tool.mypy]
+python_version = "3.8"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
