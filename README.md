@@ -1,7 +1,7 @@
-# 🚀 Lark Handover Skill
+# 🚀 离职.Skill
 
 <p align="center">
-  <strong>飞书离职交接文档自动生成器</strong>
+  <strong>飞书离职交接文档+离职话术自动生成器</strong>
 </p>
 
 <p align="center">
